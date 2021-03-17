@@ -9,8 +9,8 @@
   - [Live Bluetooth Attacks](#live-bluetooth-attacks)
     - [Overview](#overview)
     - [Setup](#setup)
-      - [AttifyOS](#attifyos)
-      - [ESP32 with BLE CTF](#esp32-with-ble-ctf)
+      - [Live Demo](#Attending-the-live-demo)
+      - [Bring Your Own Device](#Bring-your-own-device)
     - [GATTacker 101](#gattacker-101)
       - [Testing the GATTacker Setup](#testing-the-gattacker-setup)
     - [Challenges](#challenges)
@@ -61,10 +61,42 @@ A brief description of each of the sub-sections follows:
 
 ### Setup
 
-The live portion of this workshop consists of two parts: the virtualized operating system you'll be testing from and the target device.
+Depending on whether or not you will be attending the live workshop or bringing your own microcontroller, the setup will differ.
 
-#### AttifyOS
-The testing environment is where you're testing the devices from. The environment we'll be using is the AttifyOS operating system. You can download it at the following URL, and it's been tested with the latest VMware and VirtualBox versions:
+<a name="live-demo"></a>
+
+#### Attending the live demo
+
+Each team will be provided a SSH credentials to access the live testing environment. For Linux/Mac operating systems, SSH comes native. Windows users will need to download and install an SSH client such as [PuTTY](https://www.putty.org/) or [MobaXTerm](https://mobaxterm.mobatek.net/).
+
+Each team will have their own devices to test. The MAC addresses (which will be needed later) can be found below:
+* Device A: 24:6F:28:7A:BA:72
+* Device B: 24:6F:28:7A:A2:BA
+* Device C: 24:6F:28:7A:9E:12
+* Device D: 24:6F:28:7A:A3:A2
+* Device E: 24:6F:28:7A:FC:2E
+* Device F: 24:6F:28:7A:AC:22
+
+<a name="byod"></a>
+
+#### Bring your own device
+
+At a high level, the setup for bringing your own device requires three things:
+1. A USB Bluetooth 4.0 Dongle that supports Low Energy
+2. An ESP32 Microcontroller
+3. An operating system with the tools involved
+
+
+To setup the dongle, all you will need to do is plug it into a supported operating system. Most of them work cross-platform but may have issues with virtualization software. An example dongle looks like:
+
+![logo](resources/Dongle.png)
+
+
+To setup the microcontroller, refer to the instructions found in Appendix A. A sample ESP32 microcontroller looks like:
+
+![logo](resources/ESP32.png)
+
+The testing environment you'll need to use is the AttifyOS operating system. You can download a pre-made .ova file at the following URL. It's been tested with the latest VMware and VirtualBox versions:
 
 **Credentials: oit/attify123**
 
@@ -72,25 +104,6 @@ The testing environment is where you're testing the devices from. The environmen
 https://drive.google.com/file/d/0Bz-2-OHt_4gQTkNYb21RRXBuNlE/view
 ```
 
-#### ESP32 with BLE CTF
-
-You should have received a Bluetooth dongle:
-
-![logo](resources/Dongle.png)
-
-
-You should also have received an ESP32 microcontroller:
-
-![logo](resources/ESP32.png)
-
-
-To interact with your ESP32 microcontroller, you'll need the associated MAC address. The MAC addresses can be found below:
-* Device A: 24:6F:28:7A:BA:72
-* Device B: 24:6F:28:7A:A2:BA
-* Device C: 24:6F:28:7A:9E:12
-* Device D: 24:6F:28:7A:A3:A2
-* Device E: 24:6F:28:7A:FC:2E
-* Device F: 24:6F:28:7A:AC:22
 
 <a name="gattacker"></a>
 
